@@ -6,24 +6,24 @@ import math
 
 class Autodetec:
     def __init__(self):
-        # 初始化medialpipe
+        # initial medialpipe
         self.mp_drawing = mp.solutions.drawing_utils
         self.mp_drawing_styles = mp.solutions.drawing_styles
         self.mp_face_mesh = mp.solutions.face_mesh
         self.mp_hands = mp.solutions.hands
 
-    # 主函数
+    # main func
     def recognize(self):
-        # 计算刷新率
+        # cal refresh
         fpsTime = time.time()
 
-        # OpenCV读取视频流
+        # OpenCV to read camera
         cap = cv2.VideoCapture(0)
-        # 视频分辨率
+        # refresh for the video
         resize_w = 640
         resize_h = 480
 
-        # 画面显示初始化参数
+        # initialization parameters of display
         rect_height = 0
         rect_percent_text = 0
 
